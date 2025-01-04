@@ -89,9 +89,9 @@ async def Mdata02(download_directory):
 
     return width, duration
 
-async def Mdata03(download_directory):
+async def Mdata03(file_path):
     duration = 0
-    metadata = extractMetadata(createParser(download_directory))
+    metadata = extractMetadata(createParser(file_path))
     if metadata is not None:
         if metadata.has("duration"):
             duration = metadata.get('duration').seconds
